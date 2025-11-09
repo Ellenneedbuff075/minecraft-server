@@ -1,3 +1,5 @@
+#!/bin/bash
+
 echo "Instalando Java, por favor espera..."
 sudo apt-get update > /dev/null 2>&1
 sudo apt-get install -y openjdk-17-jre-headless > /dev/null 2>&1

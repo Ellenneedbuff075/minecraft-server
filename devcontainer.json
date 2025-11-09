@@ -1,13 +1,11 @@
 {
   "name": "Minecraft Server",
   "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
-
   "remoteEnv": {
     "WORLD_NAME": "simetria_land",
     "WORLD_SEED": "364298790"
   },
-
-  "postCreateCommand": "bash ./.devcontainer/startup.sh",
+  "postCreateCommand": "bash ./startup.sh",
   "forwardPorts": [25565, 19132],
   "portsAttributes": {
     "25565": {

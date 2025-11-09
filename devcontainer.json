@@ -1,0 +1,10 @@
+{
+  "name": "Minecraft Server",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "postCreateCommand": "bash ./.devcontainer/startup.sh",
+  "forwardPorts": [25565, 19132],
+  "portsAttributes": {
+    "25565": { "label": "Minecraft Java Port" },
+    "19132": { "label": "Minecraft Bedrock Port" }
+  }
+}

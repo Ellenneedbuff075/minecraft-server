@@ -1,10 +1,24 @@
 {
   "name": "Minecraft Server",
   "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+
+  "remoteEnv": {
+    "WORLD_NAME": "simetria_land",
+    "WORLD_SEED": "364298790"
+  },
+
   "postCreateCommand": "bash ./.devcontainer/startup.sh",
   "forwardPorts": [25565, 19132],
   "portsAttributes": {
-    "25565": { "label": "Minecraft Java Port" },
-    "19132": { "label": "Minecraft Bedrock Port" }
+    "25565": {
+      "label": "Minecraft Java Port",
+      "onAutoForward": "notify",
+      "visibility": "public"
+    },
+    "19132": {
+      "label": "Minecraft Bedrock Port",
+      "onAutoForward": "notify",
+      "visibility": "public"
+    }
   }
 }

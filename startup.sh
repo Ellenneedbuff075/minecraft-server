@@ -4,6 +4,9 @@ sudo apt-get install -y openjdk-17-jre-headless > /dev/null 2>&1
 echo "Java instalado."
 echo ""
 
+echo "Asegurando que los puertos sean públicos..."
+gh codespace ports visibility 25565:public 19132:public -c $CODESPACE_NAME
+
 if [ ! -f "server.properties" ]; then
     echo "Detectado primer inicio del servidor. Realizando configuración inicial..."
     echo "eula=true" > eula.txt
